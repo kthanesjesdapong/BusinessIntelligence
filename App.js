@@ -7,7 +7,6 @@
  */
 
 import * as React from 'react';
-import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import 'react-native-gesture-handler';
@@ -15,21 +14,18 @@ import Businesses from './screens/Businesses';
 import BusinessDetail from './screens/BusinessDetail';
 import ScreenTitle from './components/ScreenTitle';
 
+
 const MainNavigator = createStackNavigator();
 
 const App = () => {
+
+  const s = [1, 2, 3, 4, 5, 6, 7, 8]
+
   return (
     <NavigationContainer>
       <MainNavigator.Navigator>
         <MainNavigator.Screen name='Home'
           component={Businesses}
-          // options={{
-          //   title: 'Welcome',
-          //   headerStyle: {
-          //     backgroundColor: '#121212',
-          //   },
-          //   headerTintColor: '#F5F5F5',
-          // }}
           options={{
             headerTitle: <ScreenTitle text='Companies' />,
             headerStyle: {
@@ -47,21 +43,4 @@ const App = () => {
 export default App;
 
 
-// const styles = StyleSheet.create({
-//   container: {
-//     flex: 1,
-//     backgroundColor: '#fff',
-//   },
-//   titleWrapper: {
-//     marginTop: 80,
-//     paddingHorizontal: 16,
-//   },
-//   largeTitle: {
-//     fontSize: 24,
-//     fontWeight: 'bold',
-//   },
-//   title: {
-//     fontSize: 24,
-//     fontWeight: 'bold',
-//   }
-// })
+//          component={Businesses}

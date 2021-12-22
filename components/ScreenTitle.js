@@ -14,6 +14,7 @@ export default function ScreenTitle({ text }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        marginRight: 250,
     },
     largeTitle: {
         fontSize: 24,
