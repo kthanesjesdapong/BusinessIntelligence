@@ -8,17 +8,7 @@ export default function BusinessDetail({ navigation, route, loading }) {
 
   return (
     <View style={styles.businessContainer}>
-      <View style={styles.graphContainer}>
-        <Text style={styles.graphText}>Graph</Text>
-      </View>
-      <View style={styles.placeHolder}>
-        <Card style={{ height: 30, width: 150, cornerRadius: 10, elevation: 10, alignItems: 'center', justifyContent: 'center' }}>
-          <Text style={styles.placeHolderText}>
-            Graph / History
-          </Text>
-        </Card>
-      </View>
-      <Card style={{ height: 150, width: 350, cornerRadius: 10, elevation: 8, justifyContent: 'center', alignItems: 'center' }}>
+      <Card style={{ height: 150, width: 350, cornerRadius: 10, elevation: 8, justifyContent: 'center', alignItems: 'center', marginBottom: 80 }}>
         <View style={styles.businessInfoContainer}>
           <View style={styles.nameWrapper}>
             <Text style={styles.name}>
@@ -33,6 +23,17 @@ export default function BusinessDetail({ navigation, route, loading }) {
           </View>
         </View>
       </Card>
+      <View style={styles.placeHolder}>
+        <Card style={{ height: 30, width: 150, cornerRadius: 10, elevation: 10, alignItems: 'center', justifyContent: 'center' }}>
+          <Text style={styles.placeHolderText}>
+            Graph / History
+          </Text>
+        </Card>
+      </View>
+
+      <View style={styles.graphContainer}>
+        <Text style={styles.graphText}>Graph</Text>
+      </View>
     </View>
   )
 }
@@ -42,8 +43,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    // backgroundColor: '#121212',
-
   },
   cardStyle: {
     height: 100,
@@ -62,11 +61,10 @@ const styles = StyleSheet.create({
     color: 'black'
   },
   graphContainer: {
-    height: 250,
+    height: 300,
     width: 380,
-    backgroundColor: '#f2f3f4',
+    backgroundColor: '#FAF9F6',
     borderRadius: 10,
-    marginBottom: 80,
     justifyContent: 'center',
     alignItems: 'center',
   },
