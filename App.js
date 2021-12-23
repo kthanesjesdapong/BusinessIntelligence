@@ -6,7 +6,7 @@
  * @flow
  */
 
-import * as React from 'react';
+import React, { useRef } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import 'react-native-gesture-handler';
@@ -19,28 +19,28 @@ const MainNavigator = createStackNavigator();
 
 const App = () => {
 
-  const s = [1, 2, 3, 4, 5, 6, 7, 8]
-
   return (
     <NavigationContainer>
       <MainNavigator.Navigator>
         <MainNavigator.Screen name='Home'
           component={Businesses}
           options={{
-            headerTitle: <ScreenTitle text='Companies' />,
+            headerTitle: <ScreenTitle text='Businesses' />,
             headerStyle: {
               backgroundColor: '#121212',
             }
-
           }}
         />
-        <MainNavigator.Screen name="Profile" component={BusinessDetail} />
+        <MainNavigator.Screen name="BusinessD" component={BusinessDetail}
+          options={({ route }) => ({
+            headerTitle: <ScreenTitle text={route.params.name} />,
+            headerStyle: {
+              backgroundColor: '#121212',
+            }
+          })} />
       </MainNavigator.Navigator>
     </NavigationContainer>
   );
 };
 
 export default App;
-
-
-//          component={Businesses}

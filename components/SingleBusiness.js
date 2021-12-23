@@ -1,9 +1,10 @@
-import React from 'react'
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
+import React from 'react';
+import { View, Text, StyleSheet, TouchableOpacity, Button } from 'react-native';
 
-const SingleBusiness = ({ name, address, city, country }) => {
+const SingleBusiness = ({ name, address, city, country, revenue, navigation }) => {
     return (
-        <TouchableOpacity>
+        <TouchableOpacity
+            onPress={() => navigation.navigate('BusinessD', { name: name, address: address, city: city, country: country, revenue: revenue })}>
             <View style={styles.itemWrapper}>
                 <View style={styles.leftWrapper}>
                     <View style={styles.leftInfoWrapper}>
@@ -66,6 +67,5 @@ const styles = StyleSheet.create({
         borderBottomWidth: StyleSheet.hairlineWidth,
         borderBottomColor: 'grey',
         marginHorizontal: 9,
-        // borderBottomColor: 'red',
     }
 })

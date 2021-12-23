@@ -1,13 +1,11 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
 import Data from '../data.json';
 import SingleBusiness from '../components/SingleBusiness'
 
-export default function Businesses() {
 
-
+export default function Businesses({ navigation }) {
   return (
-
     <FlatList
       keyExtractor={(item) => item.id}
       data={Data}
@@ -16,7 +14,9 @@ export default function Businesses() {
           name={item.name}
           address={item.location.address}
           city={item.location.city}
-          country={item.location.country} />
+          country={item.location.country}
+          navigation={navigation}
+          revenue={item.revenue} />
       )} />
   )
 }

@@ -14,10 +14,10 @@ export default function ScreenTitle({ text }) {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginRight: 250,
+        justifyContent: 'flex-end',
     },
     largeTitle: {
-        fontSize: 24,
+        fontSize: 26,
         fontWeight: 'bold',
         marginTop: 10,
         color: '#F5F5F5',
