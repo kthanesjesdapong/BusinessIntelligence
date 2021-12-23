@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Button } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 const SingleBusiness = ({ name, address, city, country, revenue, navigation }) => {
     return (
@@ -63,9 +63,9 @@ const styles = StyleSheet.create({
     companyCountry: {
         fontSize: 13,
     },
-    divider: {
-        borderBottomWidth: StyleSheet.hairlineWidth,
-        borderBottomColor: 'grey',
-        marginHorizontal: 9,
-    }
+    // divider: {
+    //     borderBottomWidth: StyleSheet.hairlineWidth,
+    //     borderBottomColor: 'grey',
+    //     marginHorizontal: 9,
+    // }
 })

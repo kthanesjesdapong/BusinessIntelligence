@@ -1,5 +1,5 @@
 import React from 'react'
-import { FlatList, Text, StyleSheet, View } from 'react-native';
+import { Text, StyleSheet, View } from 'react-native';
 
 export default function ScreenTitle({ text }) {
     return (
